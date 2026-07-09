@@ -1,0 +1,12 @@
+# CSRF PoC Generator & Analyzer
+# ------------------------------
+# This tool relies only on the Python standard library.
+# No third-party packages are required.
+#
+# Requirements:
+#   - Python 3.12+
+#   - tkinter (for the GUI) -- bundled with most Python installs.
+#     If missing on Linux, install it via your package manager:
+#       Debian/Ubuntu : sudo apt install python3-tk
+#       Fedora        : sudo dnf install python3-tkinter
+#       Arch          : sudo pacman -S tk

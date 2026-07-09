@@ -61,7 +61,7 @@ Standard library only — `requirements.txt` is intentionally empty of packages 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/csrf-poc-generator.git
+git clone https://github.com/moufez/csrf-poc-generator.git
 cd csrf-poc-generator
 
 # 2. (Optional) create a virtual environment

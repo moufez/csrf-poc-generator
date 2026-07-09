@@ -57,13 +57,38 @@ Combine the request, analysis, and PoC into a Markdown or HTML report for the wr
 
 ## Installation
 
-Standard library only — no pip dependencies.
+Standard library only — `requirements.txt` is intentionally empty of packages (comments only), since no third-party dependency is needed to run the core tool.
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/<your-username>/csrf-poc-generator.git
+cd csrf-poc-generator
+
+# 2. (Optional) create a virtual environment
+python3 -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+
+# 3. Install requirements (no-op — confirms your Python setup, nothing to download)
+pip install -r requirements.txt
+
+# 4. Run it
 python3 csrf_poc.py --help
 ```
 
-GUI requires `tkinter` (bundled with most Python installs; on Debian/Ubuntu: `sudo apt install python3-tk`).
+**GUI dependency (not a pip package):** the GUI uses `tkinter`, which ships with most Python installs but is a separate OS package on some Linux distros:
+
+```bash
+# Debian/Ubuntu
+sudo apt install python3-tk
+
+# Fedora
+sudo dnf install python3-tkinter
+
+# Arch
+sudo pacman -S tk
+```
+
+If you only use the CLI (`--analyze`, `--generate`, `--report`, `diff`), `tkinter` isn't required at all.
 
 ---
 
